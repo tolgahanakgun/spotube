@@ -1,4 +1,5 @@
 import spotipy
+import keys
 import json
 import subprocess
 from spotipy.oauth2 import SpotifyClientCredentials
@@ -6,13 +7,13 @@ from apiclient.discovery import build
 from apiclient.errors import HttpError
 from oauth2client.tools import argparser
 
-SPOTIFY_USERNAME = 'AUSERNAME'
-SPOTIFY_PLAYLIST_ID = 'APLAYLISTID'
-SPOTIPY_CLIENT_ID='XXXXXXXXXXXXX'
-SPOTIPY_CLIENT_SECRET='XXXXXXXXXXXXX'
-YOUTUBE_DEVELOPER_KEY = "XXXXXXXXXXXXX"
-YOUTUBE_API_SERVICE_NAME = "youtube"
-YOUTUBE_API_VERSION = "v3"
+SPOTIFY_USERNAME = keys.SPOTIFY_USERNAME #'AUSERNAME'
+SPOTIFY_PLAYLIST_ID = keys.SPOTIPY_PLAYLIST_ID #'APLAYLISTID'
+SPOTIPY_CLIENT_ID = keys.SPOTIPY_CLIENT_ID #'XXXXXXXXXXXXX'
+SPOTIPY_CLIENT_SECRET = keys.SPOTIPY_CLIENT_SECRET #'XXXXXXXXXXXXX'
+YOUTUBE_DEVELOPER_KEY = keys.YOUTUBE_DEVELOPER_KEY #"XXXXXXXXXXXXX"
+YOUTUBE_API_SERVICE_NAME = 'youtube'
+YOUTUBE_API_VERSION = 'v3'
 
 def youtube_search(q, max_results=50,order="relevance", token=None, location=None, location_radius=None):
 
